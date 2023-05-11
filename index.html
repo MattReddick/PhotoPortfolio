@@ -694,9 +694,88 @@
             <div class="main-content" data-content-field="main-content">
               <div id="galleryWrapper">
                 <div id="slideshowWrapper" class="">
-                  <div id="slideshow" class="slideshow">
+                  <div onload="buildFrontCoverPhotos();" id="slideshow" data-role="fieldcontain" class="slideshow">
+
+
+                    <script>
+                      var photoNames = [
+                        "images/FrontPage.R1-04360-0022.jpg",
+                        "images/FrontPage.R1-05391-0016.JPG",
+                        "images/FrontPage.R1-05391-0022.JPG",
+                        "images/FrontPage.R1-05391-0036.JPG",
+                        "images/FrontPage.R1-05391-0035.JPG",
+                        "images/FrontPage.R1-05391-0027.JPG",
+                        "images/FrontPage.R2-04361-0000.jpg",
+                        "images/FrontPage.R1-02562-0021.JPG",
+                        "images/FrontPage.R1-02562-0022.JPG",
+                        "images/FrontPage.R1-02562-0014.JPG",
+                        "000083250026.jpg",
+                        "000054860012.jpg",
+                        "000054860001.jpg",
+                        "000028720011.jpg",
+                        "000028720002.jpg",
+                        "000028720009.jpg",
+                        "000028720019.jpg",
+                        "000028720028.jpg",
+                        "000028720030.jpg",
+                        "000054860011.jpg",
+                        "000083250025.jpg",
+                        "000089080001.jpg",
+                        "000089080005.jpg",
+                        "000089080016.jpg",
+                        "A150040_A150040_009.jpg",
+                        "A150966_A150966_021A.jpg",
+                        "A153927_A153927_009A.jpg",
+                        "A153927_A153927_011A.jpg",
+                        "A153927_A153927_018A.jpg",
+                        "A153927_A153927_021A.jpg",
+                        "A154350_A154350_002A.jpg",
+                        "A154350_A154350_006A.jpg",
+                        "A154350_A154350_010A.jpg",
+                        "A154350_A154350_011A.jpg",
+                        "A190543_A190543_003A.jpg",
+                        "A190543_A190543_012A.jpg",
+                        "A190543_A190543_019A.jpg",
+                        "A190543_A190543_024A.jpg",
+                        "IMG_7527.jpg",
+                        "IMG_7539.jpg",
+                        "IMG_7541.jpg",
+                        "R1-02562-0006.JPG",
+                        "R1-02562-0032.JPG",
+                        "R1-02718-0029.JPG",
+                        "R1-04360-0020.jpg",
+                        "R1-04360-0021.jpg",
+                        "R1-04360-0024.jpg",
+                        "R1-05391-0012.JPG",
+                        "R1-05391-0019.JPG",
+                        "R2-04361-0001.jpg",
+                        "R2-04361-0010.jpg",
+                        "R2-04361-0018.jpg",
+                        "R2-04361-0019.jpg",
+                        "R2-04361-0027.jpg"
+                      ];
+
+                      function buildFrontCoverPhotos() {
+                          var slideshow = document.getElementById("slideshow");
+                          var html = "<div id='slideshow' class='slideshow'>";
+                          for (var i = 0; i < photoNames.length; i++) {
+                              html += "<div class='slide' data-slide-id='" + (i+1) + "' data-slide-url='" + (i+1) + "'>" + "/n";
+                              html += "<noscript><img src='" + photoNames[i] + "' /></noscript>" + "/n";
+                              html += "<img class ='load-false' data-src='" + photoNames[I] + "' data-image='" + photoNames[i] + "'";
+                              html += "data-image-dimensions='2432x3588' data-image-focal-point='0.5,0.5'  data-load='false'  data-image-id='" + (i+1) + "' data-type='image' />" + ",/div>";
+                             
+                          }
+                          html += "</div>";
+
+                          slideshow.innerHTML = html;
+                      }
+                      buildFrontCoverPhotos();
+                    </script>
+                    
+
+
                     <div class="slide" data-slide-id="1" data-slide-url="1">
-                      <noscript><img src="images/FrontPage/R1-04360-0022.jpg" /></noscript>
+                      <noscript><img src=photoNames[data-slide-id] /></noscript>
                       <img
                         class="load-false"
                         data-src="images/FrontPage/R1-04360-0022.jpg"
