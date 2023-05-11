@@ -702,16 +702,16 @@
                   >
                     <script>
                       var photoNames = [
-                        "images/FrontPage.R1-04360-0022.jpg",
-                        "images/FrontPage.R1-05391-0016.JPG",
-                        "images/FrontPage.R1-05391-0022.JPG",
-                        "images/FrontPage.R1-05391-0036.JPG",
-                        "images/FrontPage.R1-05391-0035.JPG",
-                        "images/FrontPage.R1-05391-0027.JPG",
-                        "images/FrontPage.R2-04361-0000.jpg",
-                        "images/FrontPage.R1-02562-0021.JPG",
-                        "images/FrontPage.R1-02562-0022.JPG",
-                        "images/FrontPage.R1-02562-0014.JPG",
+                        "images/FrontPage/R1-04360-0022.jpg",
+                        "images/FrontPage/R1-05391-0016.JPG",
+                        "images/FrontPage/R1-05391-0022.JPG",
+                        "images/FrontPage/R1-05391-0036.JPG",
+                        "images/FrontPage/R1-05391-0035.JPG",
+                        "images/FrontPage/R1-05391-0027.JPG",
+                        "images/FrontPage/R2-04361-0000.jpg",
+                        "images/FrontPage/R1-02562-0021.JPG",
+                        "images/FrontPage/R1-02562-0022.JPG",
+                        "images/FrontPage/R1-02562-0014.JPG",
                         "000083250026.jpg",
                         "000054860012.jpg",
                         "000054860001.jpg",
@@ -758,7 +758,7 @@
                         "R2-04361-0027.jpg",
                       ];
 
-                      /* function buildFrontCoverPhotos() {
+                      function buildFrontCoverPhotos() {
                         var slideshow = document.getElementById("slideshow");
                         var html = "<div id='slideshow' class='slideshow'>";
                         for (var i = 0; i < photoNames.length; i++) {
@@ -767,13 +767,11 @@
                             (i + 1) +
                             "' data-slide-url='" +
                             (i + 1) +
-                            "'>" +
-                            "/n";
+                            "'>";
                           html +=
-                            "<noscript><img src='" +
+                            '<noscript><img src="' +
                             photoNames[i] +
-                            "' /></noscript>" +
-                            "/n";
+                            '" /></noscript>';
                           html +=
                             "<img class ='load-false' data-src='" +
                             photoNames[i] +
@@ -790,7 +788,7 @@
 
                         slideshow.innerHTML = html;
                       }
-                      buildFrontCoverPhotos(); */
+                      buildFrontCoverPhotos();
                     </script>
 
                     <div class="slide" data-slide-id="1" data-slide-url="1">
