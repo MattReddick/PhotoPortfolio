@@ -694,9 +694,12 @@
             <div class="main-content" data-content-field="main-content">
               <div id="galleryWrapper">
                 <div id="slideshowWrapper" class="">
-                  <div onload="buildFrontCoverPhotos();" id="slideshow" data-role="fieldcontain" class="slideshow">
-
-
+                  <div
+                    onload="buildFrontCoverPhotos();"
+                    id="slideshow"
+                    data-role="fieldcontain"
+                    class="slideshow"
+                  >
                     <script>
                       var photoNames = [
                         "images/FrontPage.R1-04360-0022.jpg",
@@ -752,34 +755,50 @@
                         "R2-04361-0010.jpg",
                         "R2-04361-0018.jpg",
                         "R2-04361-0019.jpg",
-                        "R2-04361-0027.jpg"
+                        "R2-04361-0027.jpg",
                       ];
 
                       function buildFrontCoverPhotos() {
-                          var slideshow = document.getElementById("slideshow");
-                          var html = "<div id='slideshow' class='slideshow'>";
-                          for (var i = 0; i < photoNames.length; i++) {
-                              html += "<div class='slide' data-slide-id='" + (i+1) + "' data-slide-url='" + (i+1) + "'>" + "/n";
-                              html += "<noscript><img src='" + photoNames[i] + "' /></noscript>" + "/n";
-                              html += "<img class ='load-false' data-src='" + photoNames[I] + "' data-image='" + photoNames[i] + "'";
-                              html += "data-image-dimensions='2432x3588' data-image-focal-point='0.5,0.5'  data-load='false'  data-image-id='" + (i+1) + "' data-type='image' />" + ",/div>";
-                             
-                          }
-                          html += "</div>";
+                        var slideshow = document.getElementById("slideshow");
+                        var html = "<div id='slideshow' class='slideshow'>";
+                        for (var i = 0; i < photoNames.length; i++) {
+                          html +=
+                            "<div class='slide' data-slide-id='" +
+                            (i + 1) +
+                            "' data-slide-url='" +
+                            (i + 1) +
+                            "'>" +
+                            "/n";
+                          html +=
+                            "<noscript><img src='" +
+                            photoNames[i] +
+                            "' /></noscript>" +
+                            "/n";
+                          html +=
+                            "<img class ='load-false' data-src='" +
+                            photoNames[I] +
+                            "' data-image='" +
+                            photoNames[i] +
+                            "'";
+                          html +=
+                            "data-image-dimensions='2432x3588' data-image-focal-point='0.5,0.5'  data-load='false'  data-image-id='" +
+                            (i + 1) +
+                            "' data-type='image' />" +
+                            ",/div>";
+                        }
+                        html += "</div>";
 
-                          slideshow.innerHTML = html;
+                        slideshow.innerHTML = html;
                       }
                       buildFrontCoverPhotos();
                     </script>
-                    
-
 
                     <div class="slide" data-slide-id="1" data-slide-url="1">
-                      <noscript><img src=photoNames[data-slide-id] /></noscript>
+                      <noscript><img src="${photoNames[0]}" /></noscript>
                       <img
                         class="load-false"
-                        data-src="images/FrontPage/R1-04360-0022.jpg"
-                        data-image="images/FrontPage/R1-04360-0022.jpg"
+                        data-src="${photoNames[0]}"
+                        data-image="${photoNames[0]}"
                         data-image-dimensions="2432x3580"
                         data-image-focal-point="0.5,0.5"
                         data-load="false"
@@ -787,9 +806,11 @@
                         data-type="image"
                       />
                     </div>
-                    
+
                     <div class="slide" data-slide-id="2" data-slide-url="2">
-                      <noscript><img src="images/FrontPage/R1-05391-0016.JPG" /></noscript>
+                      <noscript
+                        ><img src="images/FrontPage/R1-05391-0016.JPG"
+                      /></noscript>
                       <img
                         class="load-false"
                         data-src="images/FrontPage/R1-05391-0016.JPG"
@@ -801,9 +822,11 @@
                         data-type="image"
                       />
                     </div>
-                    
+
                     <div class="slide" data-slide-id="3" data-slide-url="3">
-                      <noscript><img src="images/FrontPage/R1-05391-0022.JPG" /></noscript>
+                      <noscript
+                        ><img src="images/FrontPage/R1-05391-0022.JPG"
+                      /></noscript>
                       <img
                         class="load-false"
                         data-src="images/FrontPage/R1-05391-0022.JPG"
@@ -815,9 +838,11 @@
                         data-type="image"
                       />
                     </div>
-                    
+
                     <div class="slide" data-slide-id="4" data-slide-url="4">
-                      <noscript><img src="images/FrontPage/R1-05391-0036.JPG" /></noscript>
+                      <noscript
+                        ><img src="images/FrontPage/R1-05391-0036.JPG"
+                      /></noscript>
                       <img
                         class="load-false"
                         data-src="images/FrontPage/R1-05391-0036.JPG"
@@ -829,9 +854,11 @@
                         data-type="image"
                       />
                     </div>
-                    
+
                     <div class="slide" data-slide-id="5" data-slide-url="5">
-                      <noscript><img src="images/FrontPage/R1-05391-0035.JPG" /></noscript>
+                      <noscript
+                        ><img src="images/FrontPage/R1-05391-0035.JPG"
+                      /></noscript>
                       <img
                         class="load-false"
                         data-src="images/FrontPage/R1-05391-0035.JPG"
@@ -843,15 +870,6 @@
                         data-type="image"
                       />
                     </div>
-                    
-                    <div class="slide" data-slide-id="6" data-slide-url="6">
-                      <noscript><img src="images/FrontPage/R1-05391-0027.JPG" /></noscript>
-                      <img
-                        class="load-false"
-                        data-src="images/FrontPage/R1-05391-0027.JPG"
-                        data-image="images/FrontPage/R1-05391-0027.JPG"
-                        >
-                    
                   </div>
                   <div class="overlay-controls left-control"></div>
                   <div
