@@ -758,6 +758,17 @@
                         "R2-04361-0027.jpg",
                       ];
 
+                      function getImageSize(filePath) {
+                        var img = new Image();
+                        img.onload = function () {
+                          var width = img.width;
+                          var height = img.height;
+                          console.log("Image Width: " + width);
+                          console.log("Image Height: " + height);
+                        };
+                        img.src = filePath;
+                      }
+
                       function buildFrontCoverPhotos() {
                         var slideshow = document.getElementById("slideshow");
                         var html = "<div id='slideshow' class='slideshow'>";
@@ -782,6 +793,7 @@
                             "data-image-dimensions='2432x3588' data-image-focal-point='0.5,0.5'  data-load='false'  data-image-id='" +
                             (i + 1) +
                             "' data-type='image' />";
+                          html += "</div>";
                         }
                         html += "</div>";
 
