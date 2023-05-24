@@ -760,6 +760,7 @@
 
                       function buildFrontCoverPhotos() {
                         var slideshow = document.getElementById("slideshow");
+                        var html = "<div id='slideshow2' class='slideshow2'>";
                         for (var i = 0; i < photoNames.length; i++) {
                           html +=
                             "<div class='slide' data-slide-id='" +
@@ -782,6 +783,8 @@
                             (i + 1) +
                             "' data-type='image' />";
                         }
+                        html += "</div>";
+
                         slideshow.innerHTML = html;
                       }
                       buildFrontCoverPhotos();
